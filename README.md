@@ -1,2 +1,2 @@
-# kubernetes_network_policy_test
+# Kubernetes NetworkPolicy Test
 File used in blog
