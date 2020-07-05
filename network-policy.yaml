@@ -2,21 +2,21 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: network-policy
-  namespace: test-server
+  namespace: test-b
 spec:
   podSelector:
     matchLabels:
-      app: test-server
+      app: test-b
   policyTypes:
   - Ingress
   ingress:
   - from:
     - podSelector:
         matchLabels:
-          app: test1
+          app: test-a
     - namespaceSelector:
         matchLabels:
-          ns: test2
+          ns: test-c
     ports:
     - protocol: TCP
       port: 8080
