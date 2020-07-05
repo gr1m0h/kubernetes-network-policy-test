@@ -11,14 +11,9 @@ spec:
   - Ingress
   ingress:
   - from:
-    - podSelector:
-        matchLabels:
-          app: test-a
     - namespaceSelector:
         matchLabels:
           ns: test-c
     ports:
     - protocol: TCP
       port: 80
-  egress:
-    - {}
